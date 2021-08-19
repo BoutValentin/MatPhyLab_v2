@@ -1,24 +1,20 @@
-# README
+# MatPhyLab
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Ruby on Rails application build in the purpose to propose an easy to use website for students and professor.
 
-Things you may want to cover:
+### Environment:
 
-* Ruby version
+This projects use: 
 
-* System dependencies
+- yarn
+- ruby (3.0.0)
+- rails (6.1.4)
 
-* Configuration
+I advice you tu use [rvm](https://rvm.io/) to easly switch between ruby version.
 
-* Database creation
+### Install:
 
-* Database initialization
+Start by cloning this repositories from [github](https://github.com/BoutValentin/MatPhyLab_v2) or [gitlab](https://gitlab.com/BoutValentin/matphylab).
+Set your ruby version to the one specify in the [**environment section**](#environment).
+You can now run ```bundle install``` and start the server by using ```rails server```.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
