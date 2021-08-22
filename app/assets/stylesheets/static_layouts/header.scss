@@ -1,0 +1,130 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 5em;
+  width: 100%;
+  background: #fff;
+  color: black;
+  z-index: 0;
+  padding: 18px 15px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &.modal-open {
+    box-shadow: 0px 16px 24px -3px rgba(0,0,0,0.34);
+    border-radius: 10px 10px;
+  }
+  .always-on {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    .left-part {
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      a, a:visited {
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+        color: black;
+        text-decoration: none;
+      .header-img-container {
+        height: 2.3em;
+        margin: auto 10px auto 0;
+        .header-logo-img {
+          height: 100%;
+        }
+      }
+
+      p {
+        font-size: 1.5em;
+        font-weight: 800;
+        margin: 0;
+      }
+    }
+    }
+
+    .icon-container {
+      .icon-header-img {
+        display: initial;
+        height: 2.3em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: auto 5px;
+
+        &:active {
+          transform: scale(0.9);
+        }
+
+        &.hidden {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .weird-form-top {
+    display: initial;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    height: 5em;
+
+    .weird-form-top-img {
+      height: 100%;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .big-header {
+    &.hidden {
+      display: none;
+    }
+    z-index: 3;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    nav {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        font-weight: 700;
+
+        li {
+          margin: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          a, a:visited {
+              color: black;
+              text-decoration: none;
+          }
+
+          img {
+            margin-top: 5px;
+            margin-bottom: -20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<footer>
+    <div class="f-row">
+        <ul>
+            <li><%= link_to "Légales", legale_path %></li>
+            <li><%= link_to "Cookies", legale_path(anchor: "Cookies") %></li>
+            <li><%= link_to "Contact", contact_path %></li>
+        </ul>
+    </div>
+
+    <div class="l-row">
+        <p>Copyright &#169; <%= Date.current.year %> et <a href="https://iuristus.com" target="_blank">Iuristus 0</a>, <a href="https://boutvalentin.com" target="_blank">BOUT Valentin</a></p>
+    </div>
+
+    <%# <div class="relative-back">
+        <%= image_tag 'w-form-footer.svg' %>
+    <%# </div> %>
+</footer>
