@@ -1,0 +1,54 @@
+<header id="header">
+    <div class="always-on">
+
+        <div class="left-part">
+        <%= link_to root_path do %>
+        <div class="header-img-container">
+            <%= image_tag "book.svg", alt: "logo", class: "header-logo-img" %>
+        </div>
+
+        <p>Matphylab</p>
+        </div>
+
+        <% end %>
+
+        <div class="icon-container">
+            <%= image_tag "Hamburger.svg", alt: "logo", class: "icon-header-img", id: 'open' %>
+            <%= image_tag "Close.svg", alt: "logo", class: "icon-header-img hidden", id: 'close' %>
+
+        </div>
+    </div>
+
+
+        <div class="weird-form-top">
+            <%= image_tag "w-form-header.svg", alt: '', class: 'weird-form-top-img' %>
+        </div>
+
+    <div class="big-header hidden" id="big-header">
+        <nav>
+            <ul>
+                <li><%= link_to "Matières", '#' %>
+                <% if current_page?(:controller => 'static_pages', :action => 'home') %>
+                    <%= image_tag "Trait.svg", alt: '', class: 'trait' %>
+                <% end %>
+                </li>
+                <li><%= link_to "Classes", '#' %>
+                <% if current_page?(:controller => 'contact', :action => 'new') %>
+                    <%= image_tag "Trait.svg", alt: '', class: 'trait' %>
+                <% end %>
+                </li>
+                <li><%= link_to "Contact", contact_path %>
+                <% if current_page?(:controller => 'contact', :action => 'index') %>
+                    <%= image_tag "Trait.svg", alt: '', class: 'trait' %>
+                <% end %>
+                </li>
+                <li><%= link_to "Légales", legale_path %>
+                <% if current_page?(:controller => 'static_pages', :action => 'legal') %>
+                    <%= image_tag "Trait.svg", alt: '', class: 'trait' %>
+                <% end %>
+                </li>
+
+            <ul>
+        </nav>
+    </div>
+</header>

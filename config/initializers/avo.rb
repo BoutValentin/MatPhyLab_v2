@@ -1,6 +1,6 @@
 Avo.configure do |config|
   ## == Routing ==
-  config.root_path = '/avo'
+  config.root_path = '/prof'
 
   ## == Licensing ==
   config.license = 'community'
