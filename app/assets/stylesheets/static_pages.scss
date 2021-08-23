@@ -1,3 +1,43 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.home {
+    margin-top: 6em;
+    .accueil {
+        text-align: center;
+        h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 1.3em;
+            font-weight: 500;
+            font-style: italic;
+            padding: 1em;
+            padding-top: 0px;
+            margin-top: 0px;
+            margin-bottom: 1em;
+        }
+    }
+
+    .choose {
+        font-size: 1em;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1.5em;
+        margin-top: 2em;
+    }
+
+    .matters {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+}

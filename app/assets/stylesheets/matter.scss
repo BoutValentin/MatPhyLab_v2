@@ -1,0 +1,80 @@
+// Place all the styles related to the Matter controller here.
+// They will automatically be included in application.css.
+// You can use Sass(SCSS) here: https://sass-lang.com/
+
+
+.matter-page {
+    padding-top: 25spx;
+    h1 {
+        margin: 20px 15px 5px;
+        padding: 0;
+    }
+
+    .matters {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .curr-classe {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0px;
+        .curr-class-illustration {
+            height: 2em;
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin: 1em 0.5em;
+        }
+
+        p {
+            flex-grow: 1;
+            width: 100%;
+            font-weight: 600;
+            font-size: 1.6em;
+            padding: 0;
+            margin: 0;
+            a, a:visited {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+   
+.matter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    text-align: center;
+    margin: 25px 15px;
+    
+    border-radius: 8px;
+    padding: 5px;
+    .img-illus-matter {
+        height: 6em;
+    }
+
+    .matter-title {
+        font-size: 1.5em;
+        font-weight: 600;
+        
+        margin-bottom: 0;
+        a, a:visited {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    transition: all 0.3s ease;
+
+    &:active {
+        transform: scale(0.9);
+    }
+}

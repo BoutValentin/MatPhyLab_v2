@@ -27,8 +27,8 @@
 main {
     width: 100%;
     max-width: calc(min(100vw, 1300px));
-    min-height: calc(100vh - 340px);
-    margin: 90px auto 150px;
+    min-height: calc(100vh - 120px);
+    margin: 90px auto 30px;
 }
 
  * {

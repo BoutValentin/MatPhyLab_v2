@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get "classe", to: 'grades#index'
+  get "matiere", to: 'matters#index'
   root 'static_pages#home'
   get '/home', to: redirect('/')
+  get '/accueil', to: redirect('/')
   get '/legale', to: 'static_pages#legal'
   get '/contact', to: 'contact#index'
   post '/contact', to: 'contact#new'

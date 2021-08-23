@@ -27,7 +27,7 @@ gem 'avo'
 gem 'rexml', '~> 3.2', '>= 3.2.4'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -60,3 +60,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "turbo-rails"
+
+gem 'aws-sdk-s3', require: false

@@ -1,0 +1,78 @@
+// Place all the styles related to the Grades controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.classe-page {
+    padding-top: 25spx;
+    h1 {
+        margin: 20px 15px 5px;
+        padding: 0;
+    }
+
+    .classes {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .curr-grade {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0px;
+        .curr-grade-illustration {
+            height: 2em;
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin: 1em 0.5em;
+        }
+
+        p {
+            flex-grow: 1;
+            width: 100%;
+            font-weight: 600;
+            font-size: 1.6em;
+            padding: 0;
+            margin: 0;
+            a, a:visited {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+.grade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    text-align: center;
+    margin: 25px 15px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    .img-illus-grade {
+        height: 6em;
+    }
+
+    .grade-title {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-bottom: 0;
+        a, a:visited {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    transition: all 0.3s ease;
+
+    &:active {
+        transform: scale(0.9);
+    }
+}

@@ -1,0 +1,13 @@
+<div class="matter-page">
+<% if !@classe.nil? %>
+    <div class="curr-classe">
+    <%= image_tag @classe.illustration, class: "curr-class-illustration" %>
+    <p><%= link_to @classe.title, classe_path %></p>
+    </div>
+<% end %>
+
+<h1>Choissis une matière</h1>
+<div class="matters">
+    <%= render @matters%>
+</div>
+</div>

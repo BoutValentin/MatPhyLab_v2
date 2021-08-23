@@ -1,4 +1,13 @@
 <% provide(:title, "Accueil") %>
 
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="home">
+    <div class="accueil">
+        <h1>Bienvenue sur Matphylab</h1>
+        <p>Votre nouvelle maniere de suivre les cours</p>
+    </div>
+
+    <p class="choose">Choisis un cours ci-dessous :</p>
+    <div class="matters">
+        <%= render @matters %>
+    </div>
+</div>

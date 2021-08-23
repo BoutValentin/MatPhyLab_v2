@@ -6,6 +6,13 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
+scaleway:
+  service: S3
+  endpoint: https://s3.fr-par.scw.cloud # Scaleway API endpoint, depending on your region
+  access_key_id: <%= Rails.application.credentials.scaleway[:access_key_id] %> # Do not forget to hide your secrets
+  secret_access_key:  <%= Rails.application.credentials.scaleway[:access_secret_key_id] %> # Do not forget to hide your secrets
+  region: fr-par # Your bucket region, here it's Paris
+  bucket:  <%= Rails.application.credentials.scaleway[:bucket_name] %> # Your bucket name
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
 #   service: S3
