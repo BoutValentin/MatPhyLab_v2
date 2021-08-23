@@ -1,0 +1,20 @@
+<%= link_to cour_path(course), :class => "cour" do %>
+    <div class="cour-illus">
+        <%= image_tag course.illustration, alt: course.illustration.blob.filename %>
+    </div>
+    <div class="cour-text">
+        <p class="title"><%= course.title %></p>
+        <div class="compt-container col-1">
+            <div class="round"></div>
+            <p><%= get_number_of_skills course %> Compétences</p>
+        </div>
+        <div class="compt-container col-2">
+            <div class="round"></div>
+            <p><%= get_number_of_cours course %> Cours</p>
+        </div>
+        <div class="compt-container col-3">
+            <div class="round"></div>
+            <p><%= get_number_of_exercices course %> Exercices</p>
+        </div>
+    </div>
+<% end %>

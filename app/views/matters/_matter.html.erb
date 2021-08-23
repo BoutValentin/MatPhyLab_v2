@@ -1,8 +1,6 @@
 
 
-<div class="matter">
-    <%= link_to create_url(params[:classe_id], matter.id) do %>
+<%= link_to create_url(params[:classe_id], matter.id), :class => "matter" do %>
     <%= image_tag matter.illustration, class: 'img-illus-matter' %>
-    <p class="matter-title"><%= link_to matter.title, create_url(params[:classe_id], matter.id) %></p>
-    <% end %>
-</div>
+    <p class="matter-title"><%= matter.title %></p>
+<% end %>

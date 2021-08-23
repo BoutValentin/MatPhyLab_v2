@@ -1,0 +1,29 @@
+<div class="cours-page">
+
+<% if !@matter.nil? %>
+    <div class="curr-grade">
+    <%= image_tag @matter.illustration, class: "curr-grade-illustration" %>
+    <p><%= link_to @matter.title, matiere_path(:classe_id => @classe.id) %></p>
+    </div>
+<% end %>
+
+<% if !@classe.nil? %>
+    <div class="curr-classe">
+    <%= image_tag @classe.illustration, class: "curr-class-illustration" %>
+    <p><%= link_to @classe.title, classe_path(:matter_id => @matter.id) %></p>
+    </div>
+<% end %>
+
+
+<% if @courses.nil? || @courses.empty? %>
+
+    <p class="nf">Aucun cours n'est encore disponible pour la matiere <%= @matter.title %> et la classe <%= @classe.title %></p>
+    <p class="rt"><%= link_to "Retournez a l'accueil ?", root_path %></p>
+<% else %>
+
+<div class="cours">
+<%= render @courses %>
+</div>    
+<% end %>
+
+</div>

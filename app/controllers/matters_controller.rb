@@ -10,7 +10,7 @@ class MattersController < ApplicationController
 
   private 
 
-    def matter_params
+    def matters_params
       params.require(:grade).permit(:classe_id)
     end
 end

@@ -1,0 +1,97 @@
+<div class="cours-page show">
+
+<% if !@matter.nil? %>
+    <div class="curr-grade">
+    <%= image_tag @matter.illustration, class: "curr-grade-illustration" %>
+    <p><%= link_to @matter.title, matiere_path(:classe_id => @classe.id) %></p>
+    </div>
+<% end %>
+
+<% if !@classe.nil? %>
+    <div class="curr-classe">
+    <%= image_tag @classe.illustration, class: "curr-class-illustration" %>
+    <p><%= link_to @classe.title, classe_path(:matter_id => @matter.id) %></p>
+    </div>
+<% end %>
+
+<div class="retur">
+    <%= link_to cours_path(:matter_id => @matter.id, :classe_id => @classe.id) do %>
+    <%= image_tag "back.png" %>
+    <p>Retour a la liste des cours</p>
+    <% end %>
+</div>
+
+<div class="content">
+    <div class="illustration">
+        <%= image_tag @course.illustration, alt: @course.illustration.blob.filename %>
+    </div>
+
+    <div class="title-cont">
+        <p><%= @course.title %></p>
+    </div>
+
+    <div class="comp-cont">
+        <div class='t'>
+        <h3>Compétences</h3>
+        </div>
+        <ul>
+        <% @course.skills.each do |k,v| %>
+            <li><%= v %></li>
+        <% end %>
+        </ul>
+    </div>
+
+    <div class="ress-cont">
+        <div class='t'>
+            <h3>Ressources</h3>
+        </div>
+
+        <% if !@course.courses.nil? && !@course.courses.empty? %>
+        <div class="cour-pdf">
+            <h4>Cours</h4>
+            <ul>
+                <% @course.courses.each do |f| %>
+                    <li><%= image_tag "docs.png"%><p><%= f.blob.filename %></p><%= link_to rails_blob_path(f.blob, disposition: 'attachment')  do %>
+                        <%= image_tag "Download.png", alt: 'Telechargez le fichier', class: "ddl-img" %>
+                    <% end %> </li>
+                <% end %>
+            </ul>
+        </div>
+        <% end %>
+
+        <% if !@course.exercices.nil? && !@course.exercices.empty? %>
+        <div class="exo-pdf">
+            <h4>Exercices</h4>
+            <ul>
+                <% @course.exercices.each do |f| %>
+                    <li><%= image_tag "docs.png"%><p><%= f.blob.filename %></p><%= link_to rails_blob_path(f.blob, disposition: 'attachment')  do %>
+                        <%= image_tag "Download.png", alt: 'Telechargez le fichier', class: "ddl-img" %>
+                    <% end %></li>
+                <% end %>
+            </ul>
+        </div>
+        <% end %>
+
+        <% if !@course.m_res.nil? && !@course.m_res.empty? %>
+        <div class="mrs-pdf">
+            <h4>Autres Ressources</h4>
+            <ul>
+                <% @course.m_res.each do |f| %>
+                    <li><%= image_tag "docs.png"%><p><%= f.blob.filename %></p><%= link_to rails_blob_path(f.blob, disposition: 'attachment') do %>
+                        <%= image_tag "Download.png", alt: 'Telechargez le fichier', class: "ddl-img" %>
+                    <% end %> </li>
+                <% end %>
+            </ul>
+        </div>
+        <% end %>
+    </div>
+
+    <div class="contact-cont">
+        <div class='t'>
+        <h3>Contact</h3>
+        </div>
+        <p>Tu as des difficultés ? Des problèmes avec les fichiers ?</p>
+        <p><%= link_to "Contact ton professeur", contact_path %></p>
+    </div>
+</div>
+</div>

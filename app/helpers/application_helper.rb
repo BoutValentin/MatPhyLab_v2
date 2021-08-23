@@ -11,8 +11,7 @@ module ApplicationHelper
 
     def create_url(classe_id, matter_id)
         if !classe_id.nil? && !matter_id.nil?
-            # course_path(:classe_id => classe_id, :matter_id => matter_id).permit(:matter_id, :classe_id))
-            '#'
+            cours_path(params.merge({:classe_id => classe_id, :matter_id => matter_id}).permit(:matter_id, :classe_id))
         elsif classe_id.nil? && !matter_id.nil?
             classe_path(params.merge({:matter_id => matter_id}).permit(:matter_id, :classe_id))
         elsif !classe_id.nil? && matter_id.nil?

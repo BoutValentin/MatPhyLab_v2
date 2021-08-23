@@ -46,7 +46,7 @@
 }
 
    
-.matter {
+a.matter, a:visited.matter {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,6 +57,9 @@
     
     border-radius: 8px;
     padding: 5px;
+
+    color: black;
+    text-decoration: none;
     .img-illus-matter {
         height: 6em;
     }

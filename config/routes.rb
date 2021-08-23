@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cours', to: "courses#index"
+  get 'cours/:id', to: 'courses#show', as: 'cour'
   get "classe", to: 'grades#index'
   get "matiere", to: 'matters#index'
   root 'static_pages#home'
