@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @matters = Matter.all
+    @matters = Matter.order('id ASC').all
   end
 
   def legal

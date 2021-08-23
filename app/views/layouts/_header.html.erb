@@ -28,22 +28,22 @@
         <nav>
             <ul>
                 <li><%= link_to "Matières", matiere_path %>
-                <% if current_page?(:controller => 'matters', :action => 'index') %>
+                <% if current_page?(:controller => '/matters', :action => 'index') %>
                     <%= image_tag "Trait.svg", alt: '', class: 'trait' %>
                 <% end %>
                 </li>
                 <li><%= link_to "Classes", classe_path %>
-                <% if current_page?(:controller => 'grades', :action => 'index') %>
+                <% if current_page?(:controller => '/grades', :action => 'index') %>
                     <%= image_tag "Trait.svg", alt: '', class: 'trait' %>
                 <% end %>
                 </li>
                 <li><%= link_to "Contact", contact_path %>
-                <% if current_page?(:controller => 'contact', :action => 'index') %>
+                <% if current_page?(:controller => '/contact', :action => 'index') %>
                     <%= image_tag "Trait.svg", alt: '', class: 'trait' %>
                 <% end %>
                 </li>
                 <li><%= link_to "Légales", legale_path %>
-                <% if current_page?(:controller => 'static_pages', :action => 'legal') %>
+                <% if current_page?(:controller => '/static_pages', :action => 'legal') %>
                     <%= image_tag "Trait.svg", alt: '', class: 'trait' %>
                 <% end %>
                 </li>

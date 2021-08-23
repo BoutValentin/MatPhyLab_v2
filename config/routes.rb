@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'cours', to: "courses#index"
   get 'cours/:id', to: 'courses#show', as: 'cour'
   get "classe", to: 'grades#index'
@@ -9,6 +10,9 @@ Rails.application.routes.draw do
   get '/legale', to: 'static_pages#legal'
   get '/contact', to: 'contact#index'
   post '/contact', to: 'contact#new'
-  mount Avo::Engine, at: Avo.configuration.root_path
+  
+  authenticate :user do
+    mount Avo::Engine => Avo.configuration.root_path
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

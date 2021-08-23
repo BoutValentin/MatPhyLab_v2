@@ -1,6 +1,6 @@
 class MattersController < ApplicationController
   def index    
-    @matters = Matter.all
+    @matters = Matter.order('id ASC').all
     @classe = params[:classe_id].present? ? Grade.find(params[:classe_id]) : nil
     rescue ActiveRecord::RecordNotFound
       params.delete :classe_id

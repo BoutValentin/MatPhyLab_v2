@@ -1,0 +1,88 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    .logo-container {
+        margin: 2em auto;
+        img.book-logo {
+            height: 2.3em;
+        }
+    }
+
+    .login-form-container {
+        max-width: 500px;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.08);
+
+        .title-container {
+            text-align: center;
+            padding-top: 20px;
+            h3 {
+                font-size: 1.4em;
+                padding: 0;
+                margin: 10px 5px 3px;
+            }
+
+            p {
+                color: #adb9cb;
+                margin: 0px 5px;
+                padding: 0px;
+                font-size: 0.9em;
+            }
+        }
+
+        form {
+            margin-top: 10px;
+            padding: 5px 25px;
+            .field {
+                width: 100%;
+                height: 2.7em;
+                margin: 20px auto 15px;
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    padding: 3px 10px;
+                    border: 1px solid #adb9cb;
+                }
+
+                &.checkbox {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    input {
+                        height: 1.3em;
+                        width: 1.3em;
+                        margin: auto 10px auto 0px;
+                    }
+                }
+            }
+
+            .actions {
+                input {
+                    width: 100%;
+                    height: 2.7em;
+                    background-color: #f6d58a;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 1.1em;
+                }
+                margin-bottom: 10px;
+            }
+
+        }
+        .forgot {
+            text-align: center;
+            a, a:visited {
+                color: black;
+            }
+        }
+    }
+
+
+}
