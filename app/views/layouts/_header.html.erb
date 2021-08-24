@@ -37,8 +37,8 @@
                     <%= image_tag "Trait.svg", alt: '', class: 'trait' %>
                 <% end %>
                 </li>
-                <li><%= link_to "Contact", contact_path %>
-                <% if current_page?(:controller => '/contact', :action => 'index') %>
+                <li><%= link_to "Contact", contacts_path %>
+                <% if current_page?(:controller => '/contacts', :action => 'index') %>
                     <%= image_tag "Trait.svg", alt: '', class: 'trait' %>
                 <% end %>
                 </li>

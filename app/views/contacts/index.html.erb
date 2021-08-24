@@ -1,0 +1,48 @@
+<div class="contact-page">
+    <h1>Une question ? un problèmes dans les cours ?</h1>
+    <p>Contact ton professeur</p>
+    <div class="login">
+  <div class="logo-container">
+    <%= image_tag "book.svg", class: "book-logo", alt: "logo" %>
+  </div>
+
+  <div class="login-form-container">
+      <div class="title-container">
+        <h3>Contact ton professeur !</h3>
+        <p>Pour toutes tes questions ta professeure est la</p>
+      </div>
+    <%= form_with model: @contact do |f| %>
+        <div class="field">
+            <%= f.text_field :name, autofocus: true, autocomplete: "username", placeholder: "Entrez votre Nom et prénom" %>
+        </div>
+
+        <div class="field">
+            <%= f.text_field :subject, autofocus: true, placeholder: "Entrez le sujet de votre mail" %>
+        </div>
+
+        <div class="field">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Entrez votre email" %>
+        </div>
+
+        <div class="field textarea">
+            <%= f.text_area :message, placeholder: "Entrez votre message" %>
+        </div>
+
+        <div class="field pj">
+            <%= f.label :files, "Piece jointes" %>
+            <%= f.file_field :files, multiple: true, accept: ".pdf,.doc" %>
+        </div>
+
+
+        <div class="field hidden">
+            <%= f.text_field :nickname %>
+        </div>
+
+        <div class="actions">
+            <%= f.submit "Envoyer le mail" %>
+        </div>
+    <% end %>
+
+  </div>
+</div>
+</div>

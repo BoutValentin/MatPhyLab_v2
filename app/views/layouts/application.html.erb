@@ -19,6 +19,9 @@
     <main>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <% flash.each do |key, message| %>
+      <p class="alert alert-<%= key %>"><%= message %></p>
+    <% end %>
     <%= yield %>
     </main>
     <%= render 'layouts/footer' %>

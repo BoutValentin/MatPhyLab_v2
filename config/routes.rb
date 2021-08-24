@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get '/home', to: redirect('/')
   get '/accueil', to: redirect('/')
   get '/legale', to: 'static_pages#legal'
-  get '/contact', to: 'contact#index'
-  post '/contact', to: 'contact#new'
+  get '/contact', to: redirect('/contacts')
+  resources :contacts, only: [:index, :create ]
   
   authenticate :user do
     mount Avo::Engine => Avo.configuration.root_path

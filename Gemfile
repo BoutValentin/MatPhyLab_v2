@@ -64,3 +64,5 @@ gem "turbo-rails"
 gem 'aws-sdk-s3', require: false
 
 gem "devise", "~> 4.8"
+
+gem "mail_form", git: 'https://github.com/BoutValentin/mail_form'

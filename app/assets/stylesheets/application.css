@@ -34,3 +34,16 @@ main {
  * {
      box-sizing: border-box;
  }
+
+p.alert.alert-error, p.alert.alert-success {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 0;
+    color: #f69e77;
+}
+
+p.alert.alert-success {
+    color: #addbb5;
+}
